@@ -1,0 +1,41 @@
+/*------------------------------------*\
+$BTN
+\*------------------------------------*/
+.btn {
+    height: 48px;
+    display: inline-block;
+    border-radius: 25px;
+    @include font-size(16px, 48px);
+    font-family: 'nunitolight';
+    text-align: center;
+    transition: background .3s, color .3s;
+}
+.btn--border {
+    background: $main;
+    margin-bottom: 10px;
+    padding: 0 23px;
+    @include respond-to(tablet) {
+        margin-right: 16px;
+    }
+    &:hover {
+        background: #fff;
+        color: $main;
+    }
+}
+.btn--play {
+    background: white;
+    color: $main;
+    svg {
+        width: 30px;
+        height: 30px;
+        transition: fill .3s, stroke .3s;
+    }
+    &:hover {
+        background: darken($main, 10%);
+        color: #fff !important;
+        svg {
+            fill: #fff !important;
+            stroke: #fff !important;
+        }
+    }
+}

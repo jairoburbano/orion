@@ -1,0 +1,78 @@
+/*------------------------------------*\
+$MAIN
+\*------------------------------------*/
+html, body {
+    height: 100%;
+    color: $principal;
+}
+h1 {
+    @include font-size(36px, 40px);
+    font-family: 'nunitolight';
+    font-weight: 300;
+    margin-bottom: 4px;
+    @include respond-to(tablet) {
+        @include font-size(48px, 60px);
+        margin-bottom: 12px;
+    }
+}
+h2 {
+    @include font-size(21px, 24px);
+    font-family: 'nunitolight';
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    @include respond-to(tablet) {
+        @include font-size(24px, 26px);
+        margin-bottom: 11px;
+    }
+}
+p {
+    @include font-size(16px, 22px);
+    font-family: 'work_sanslight';
+    font-weight: 300;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+blockquote {
+    @include font-size(19px, 24px);
+    font-family: 'work_sanslight';
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 22px;
+    @include respond-to(tablet) {
+        @include font-size(24px, 30px);
+    }
+    .icon {
+        content: '';
+        width: 68px;
+        height: 38px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: url(../img/quote.svg) center no-repeat;
+        z-index: 2;
+    }
+    &::before, &::after {
+        content: '';
+        width: calc(50% - 35px);
+        height: 1px;
+        background: $main;
+        position: absolute;
+        bottom: 19px;
+        left: 0;
+        z-index: 1;
+    }
+    &::after {
+        left: auto;
+        right: 0;
+    }
+}
+strong {
+    font-family: 'work_sansmedium';
+    font-weight: 400;
+}

@@ -1,0 +1,57 @@
+/*------------------------------------*\
+$FOOTER
+\*------------------------------------*/
+.footer {
+    background: $main;
+    padding: 10px 0;
+    @include respond-to(tablet) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 7px 0;
+    }
+    .column {
+        &:first-child {
+            margin-bottom: 20px;
+            @include respond-to(tablet) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    img {
+        display: block;
+        margin: auto;
+        width: 166px;
+        @include respond-to(tablet) {
+            margin-left: 17px;
+        }
+    }
+    .redes {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        @include respond-to(tablet) {
+            padding: 4px 7px 0 0;
+        }
+        .redes__item {
+            position: relative;
+            border-radius: 12px;
+            margin: 0 5px;
+            width: 24px;
+            height: 24px;
+            overflow: hidden;
+            a {
+                width: 24px;
+                height: 24px;
+                display: block;
+                background: #62d475;
+                svg {
+                    max-width: 12px;
+                    max-height: 12px;
+                    @include center;
+                    fill: white;
+                }
+            }
+        }
+    }
+}

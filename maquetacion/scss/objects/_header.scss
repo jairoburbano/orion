@@ -1,0 +1,57 @@
+/*------------------------------------*\
+$HEADER
+\*------------------------------------*/
+.header {
+    background: $main;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 3px 15px 3px 18px;
+    height: 50px;
+    @include respond-to(tablet) {
+        height: 70px;
+        padding: 9px 28px 3px 19px;
+    }
+    .logo {
+        width: 90px;
+        @include respond-to(tablet) {
+            width: 115px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .menu {
+        display: none;
+        @include respond-to(tablet) {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        li {
+            margin: 16px 16px 0 0;
+            @include font-size(16px, 18px);
+            font-family: 'work_sanslight';
+            a {
+                background: $main;
+                border-radius: 13px;
+                padding: 4px 16px;
+                transition: background .3s, color .3s;
+                &:hover {
+                    background: #fff;
+                    color: $main;
+                }
+            }
+        }
+    }
+    .logo--right {
+        width: 109px;
+        margin-top: 11px;
+        @include respond-to(tablet) {
+            width: 201px;
+            margin-top: 5px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
